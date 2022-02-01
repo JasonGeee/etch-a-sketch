@@ -2,17 +2,26 @@
     --grid-cols: 1;
     --grid-rows: 1;
   }
+
+  body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
   
   #container {
     display: grid;
     border: 2px solid black;
-    /* grid-gap: 1em; */
     grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr); /* 1fr */
+    /* align-items: center;
+    justify-items: center; */
+    max-width: 40em;
+    max-height: 100em;
   }
   
   .grid-item {
     padding: 1em;
     border: 1px solid #ddd;
-    text-align: center;
   }
