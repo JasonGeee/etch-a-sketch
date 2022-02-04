@@ -27,12 +27,9 @@ container.addEventListener('mouseover', (e) => {
     }
 });
 
-//Clear current grid button
-// reset.addEventListener('click', (e) => {
-//     if (e.target.value == "Reset") {
-//         console.log(removeStyle);
-//     }
-// });
 reset.addEventListener('click', () => {
-    document.getElementsByClassName('grid-item').removeAttribute('style');
+  let remove = document.querySelector('#container'); //selecting id of container
+  while (remove.firstChild) { //while is it true that container has a first child
+    remove.removeChild(remove.firstChild); //remove child from container
+  }
 });
