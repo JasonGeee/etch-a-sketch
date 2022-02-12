@@ -13,7 +13,18 @@ function makeRows(rows, cols) {
   };
 };
 
-// Function to create new grid with user input
+//Creates a new grid on the webpage
+function makeGrid() {
+  let newGrid = prompt("Enter a number for a new grid from 0 - 64!", 16);
+  if (newGrid > 0 && newGrid < 64) {
+    makeRows(newGrid, newGrid);
+  } else {
+    do {
+      newGrid = prompt("Invalid answer, please enter number from 1 - 64", 16);
+    } while (newGrid < 1 || newGrid > 65);
+    makeRows(newGrid, newGrid);
+  }
+}
 
 //Event listener for hovering over grid to change color
 container.addEventListener('mouseover', (e) => {
@@ -27,5 +38,4 @@ reset.addEventListener('click', () => {
   window.location.reload(); //reloads webpage to allow reset of Etch
 });
 
-
-makeRows(16, 16);
+makeGrid();
