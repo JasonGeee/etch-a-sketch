@@ -16,12 +16,12 @@ function makeRows(rows, cols) {
 //Creates a new grid on the webpage
 function makeGrid() {
   let newGrid = prompt("Enter a number for a new grid from 0 - 64!", 16);
-  if (newGrid > 0 && newGrid < 64) {
+  if (newGrid > 0 && newGrid < 65) {
     makeRows(newGrid, newGrid);
   } else {
     do {
       newGrid = prompt("Invalid answer, please enter number from 1 - 64", 16);
-    } while (newGrid < 1 || newGrid > 65);
+    } while (newGrid < 1 || newGrid > 64);
     makeRows(newGrid, newGrid);
   }
 }
