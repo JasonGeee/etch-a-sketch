@@ -8,11 +8,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-<<<<<<< HEAD
-      height: 100%;
-=======
       /* background-color: rgb(89, 89, 89); */
->>>>>>> newEtch
   }
   
   #container {
@@ -23,15 +19,6 @@
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr); /* 1fr */
     margin-top: 2em;
-<<<<<<< HEAD
-    width: 650px;
-    height: 650px;
-  }
-  
-  .grid-item {
-    /* box-sizing: border-box; */
-    padding: 1em;
-=======
     width: 600px;
     height: 600px;
   }
@@ -53,7 +40,6 @@
   .grid-item {
     display: flex;
     padding: 3px;
->>>>>>> newEtch
     border: 1px solid #ddd;
     max-height: inherit;
   }
