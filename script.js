@@ -9,16 +9,11 @@ function makeRows(rows, cols) {
   container.style.setProperty('--grid-cols', cols);
   for (c = 0; c < (rows * cols); c++) {
     let cell = document.createElement("div");
-    // cell.innerText = (c + 1);
     container.appendChild(cell).className = "grid-item";
   };
 };
 
-makeRows(16, 16);
-
-function colorChange() {
-    // grid.style.backgroundColor = "red";
-}
+// Function to create new grid with user input
 
 //Event listener for hovering over grid to change color
 container.addEventListener('mouseover', (e) => {
@@ -27,9 +22,10 @@ container.addEventListener('mouseover', (e) => {
     }
 });
 
+//Event listener for resetting the grid
 reset.addEventListener('click', () => {
-  let remove = document.querySelector('#container'); //selecting id of container
-  while (remove.firstChild) { //while is it true that container has a first child
-    remove.removeChild(remove.firstChild); //remove child from container
-  }
+  window.location.reload(); //reloads webpage to allow reset of Etch
 });
+
+
+makeRows(16, 16);
